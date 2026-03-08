@@ -71,7 +71,7 @@ _The Iris Recognition Inference System (IRIS) software repository is owned and m
 
 ## Quickstart
 
-#### Data Science Capstone Details
+### Data Science Capstone Details
 
 **This project is developed in a fork of the original open-iris repository.**
 
@@ -139,7 +139,7 @@ IRIS_ENV=SERVER pip install -e .
 python3 -c "import iris; print(iris.__version__)"
 ```
 
-#### Running the Example Notebooks
+### Running the Example Notebooks
 
 Initial documentation of the pipeline's internal nodes can be found in the `colab/internals` directory. Some notebooks utilize the sample iris image from the *Getting started* Google Colab file. The top of each notebook that requires it includes automatic download instructions for the image.
 
