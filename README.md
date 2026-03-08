@@ -71,6 +71,86 @@ _The Iris Recognition Inference System (IRIS) software repository is owned and m
 
 ## Quickstart
 
+### Data Science Capstone Details
+
+**This project is developed in a fork of the original open-iris repository.**
+
+Upstream project:
+https://github.com/worldcoin/open-iris.git
+
+Course project fork:
+https://github.com/allison-diebol/open-iris.git
+
+The forked repository contains additional materials for the Michigan State University Data Science Capstone, including:
+- Specific installation instructions
+- Example notebooks for documenting pipeline internal nodes
+- Pipeline benchmarks against public iris datasets (*currently developing locally*)
+
+Instructions below assume you clone the course project fork rather than the upstream repository.
+
+1. **Clone the course project fork:**
+```bash
+git clone https://github.com/allison-diebol/open-iris.git
+cd open-iris
+
+# Optionally add upstream reference to track updates
+git remote add upstream https://github.com/worldcoin/open-iris.git
+```
+2. **Create a virtual environment (recommended):**
+
+Although the `open-iris` package installs its own dependencies using the `IRIS_ENV` flag, it is recommended to install the package inside a Python virtual environment. This prevents conflicts with other Python packages installed on your system and ensures reproducibility.
+```bash
+python3 -m venv iris_venv
+```
+
+The `open-iris` package has been tested with Python 3.10. Using newer versions may cause dependency conflicts with some libraries. If needed, create your virtual environment specifically using Python 3.10:
+```bash
+python3.10 -m venv iris_venv
+```
+
+Activate the environment:
+
+- Mac/Linux:
+```bash
+source iris_venv/bin/activate
+```
+- Windows:
+```bash
+iris_venv\Scripts\activate
+```
+Once activated, your terminal prompt should show `(iris_venv)`. If working in Jupyter Notebook, make sure that the kernel corresponds to the created virtual environment.
+
+3. **Install the package and dependencies from the cloned repo:**
+
+The `open-iris` repository does not use a single `requirements.txt` file. Instead, dependencies are organized within the `/requirements` directory according to the environment in which the package will run. 
+
+- `base` - core dependencies required by the iris pipeline
+- `server` - dependencies required for running inference on a local machine
+- `orb` - dependencies used when running on Worldcoin Orb hardware
+- `dev` - additional tools for development and testing
+
+These dependency groups are installed automatically based on the environment you select with the `IRIS_ENV` flag. For most users, the recommended environment is `SERVER`, which installs all packages needed to run the iris pipeline locally.
+```bash
+IRIS_ENV=SERVER pip install -e .
+```
+
+4. **Verify the installation:**
+```bash
+python3 -c "import iris; print(iris.__version__)"
+```
+
+### Running the Example Notebooks
+
+Initial documentation of the pipeline's internal nodes can be found in the `colab/internals` directory. Some notebooks utilize the sample iris image from the *Getting started* Google Colab file. The top of each notebook that requires it includes automatic download instructions for the image.
+
+| Notebook | Author | Branch | Nodes Covered |
+|----------|--------|--------|--------|
+| `colab/internals/01_segmentation.ipynb` | Tyler Lehman | `notebook/segmentation` | x |
+| `colab/internals/02_vectorization.ipynb` | Morgan Fox | `notebook/vectorization` | x |
+| `colab/internals/03_geometry.ipynb` | Calvin DeJong | `notebook/geometry` | x |
+| `colab/internals/04_quality.ipynb` | Ashlynn Blanshan | `notebook/quality` | x |
+| `colab/internals/05_encoding.ipynb` | Allison Diebol | `notebook/encoding` | LinearNormalization, SharpnessEstimation, ConvFilterBank, GaborFilter, RegularProbeSchema, FragileBitRefinement, IrisEncoder, IsMaskTooSmallValidator, IrisBBoxCalculator |
+
 ### Installation
 
 Installation is as simple as running `pip install` with specifying `IRIS_ENV` installation global flag (`IRIS_ENV` flag may be skipped if `iris` is installed from PyPl server but this option is only available when `iris` is installed on local machine). The `IRIS_ENV` flag is used to indicate an "environment" in which package is meant to work. Possible options are:
