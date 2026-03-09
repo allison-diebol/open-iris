@@ -145,7 +145,7 @@ Initial documentation of the pipeline's internal nodes can be found in the `cola
 
 | Notebook | Author | Branch | Nodes Covered |
 |----------|--------|--------|--------|
-| `colab/internals/01_segmentation.ipynb` | Tyler Lehman | `notebook/segmentation` | x |
+| `colab/internals/01_segmentation.ipynb` | Tyler Lehman | `notebook/segmentation` | MultilabelSegmentation, MultilabelSegmentationBinarization |
 | `colab/internals/02_vectorization.ipynb` | Morgan Fox | `notebook/vectorization` | x |
 | `colab/internals/03_geometry.ipynb` | Calvin DeJong | `notebook/geometry` | MomentOfArea, BisectorsMethod, FusionExtrapolation, LinearExtrapolation, LSQEllipseFitWithRefinement, EyeCentersInsideImageValidator |
 | `colab/internals/04_quality.ipynb` | Ashlynn Blanshan | `notebook/quality` | x |
