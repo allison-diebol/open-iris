@@ -131,7 +131,7 @@ git remote add upstream https://github.com/worldcoin/open-iris.git
 ```
 
 
-3. **Install the package and dependencies from the cloned repo:**
+4. **Install the package and dependencies from the cloned repo:**
 
 The `open-iris` repository does not use a single `requirements.txt` file. Instead, dependencies are organized within the `/requirements` directory according to the environment in which the package will run. 
 
@@ -154,7 +154,7 @@ To ensure that the virtual environment is consistent in IDEs, register the envir
 python -m ipykernel install --user --name=iris_attempt --display-name "Python (iris_venv)"
 ```
 
-4. **Verify the installation:**
+5. **Verify the installation:**
 ```bash
 python3 -c "import iris; print(iris.__version__)"
 ```
