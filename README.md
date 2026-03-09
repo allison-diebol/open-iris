@@ -71,6 +71,8 @@ _The Iris Recognition Inference System (IRIS) software repository is owned and m
 
 ## Quickstart
 
+---
+
 ### Data Science Capstone Details
 
 **This project is developed in a fork of the original open-iris repository.**
@@ -86,24 +88,20 @@ The forked repository contains additional materials for the Michigan State Unive
 - Example notebooks for documenting pipeline internal nodes
 - Pipeline benchmarks against public iris datasets (*currently developing locally*)
 
+### Installation Instructions (Capstone-Specific)
+
 Instructions below assume you clone the course project fork rather than the upstream repository.
 
-1. **Clone the course project fork:**
-```bash
-git clone https://github.com/allison-diebol/open-iris.git
-cd open-iris
+1. **Ensure Python Version**
 
-# Optionally add upstream reference to track updates
-git remote add upstream https://github.com/worldcoin/open-iris.git
+It is recommended to work with Python 3.10 but the package works in 3.8, 3.9, or 3.10. Ensure that you are working in one of these versions rather than a newer version. Below is an example of using Homebrew to install the proper Python version.
+```bash
+brew install python@3.10
 ```
+
 2. **Create a virtual environment (recommended):**
 
-Although the `open-iris` package installs its own dependencies using the `IRIS_ENV` flag, it is recommended to install the package inside a Python virtual environment. This prevents conflicts with other Python packages installed on your system and ensures reproducibility.
-```bash
-python3 -m venv iris_venv
-```
-
-The `open-iris` package has been tested with Python 3.10. Using newer versions may cause dependency conflicts with some libraries. If needed, create your virtual environment specifically using Python 3.10:
+Although the `open-iris` package installs its own dependencies using the `IRIS_ENV` flag, it is recommended to install the package inside a Python virtual environment. This prevents conflicts with other Python packages installed on your system and ensures reproducibility. As previously mentioned, the `open-iris` package has been tested with Python 3.10. Using newer versions may cause dependency conflicts with some libraries. If needed, create your virtual environment specifically using Python 3.10:
 ```bash
 python3.10 -m venv iris_venv
 ```
@@ -118,7 +116,20 @@ source iris_venv/bin/activate
 ```bash
 iris_venv\Scripts\activate
 ```
-Once activated, your terminal prompt should show `(iris_venv)`. If working in Jupyter Notebook, make sure that the kernel corresponds to the created virtual environment.
+Once activated, your terminal prompt should show `(iris_venv)`. Feel free to check the Python version again with the following line:
+```bash
+python --version
+```
+
+3. **Clone the course project fork:**
+```bash
+git clone https://github.com/allison-diebol/open-iris.git
+cd open-iris
+
+# Optionally add upstream reference to track updates
+git remote add upstream https://github.com/worldcoin/open-iris.git
+```
+
 
 3. **Install the package and dependencies from the cloned repo:**
 
@@ -134,6 +145,15 @@ These dependency groups are installed automatically based on the environment you
 IRIS_ENV=SERVER pip install -e .
 ```
 
+Run the following installations to ensure that modules like ipykernel exist. Specifically for ipykernel, it is needed so that Jupyter Notebooks can see the virtual environment as a kernel.
+```bash
+pip install "pydantic<2.0" open-iris opencv-python numpy pandas matplotlib tqdm scikit-learn ipykernel
+```
+To ensure that the virtual environment is consistent in IDEs, register the environment as a Jupyter kernel.
+```bash
+python -m ipykernel install --user --name=iris_attempt --display-name "Python (iris_venv)"
+```
+
 4. **Verify the installation:**
 ```bash
 python3 -c "import iris; print(iris.__version__)"
@@ -141,7 +161,7 @@ python3 -c "import iris; print(iris.__version__)"
 
 ### Running the Example Notebooks
 
-Initial documentation of the pipeline's internal nodes can be found in the `colab/internals` directory. Some notebooks utilize the sample iris image from the *Getting started* Google Colab file. The top of each notebook that requires it includes automatic download instructions for the image.
+The capstone team members' initial documentation of the pipeline's internal nodes can be found in the `colab/internals` directory. The top of each notebook that requires it includes automatic download instructions for the image (Some notebooks utilize the sample iris image from the *Getting started* Google Colab file).
 
 | Notebook | Author | Branch | Nodes Covered |
 |----------|--------|--------|--------|
@@ -150,6 +170,12 @@ Initial documentation of the pipeline's internal nodes can be found in the `cola
 | `colab/internals/03_geometry.ipynb` | Calvin DeJong | `notebook/geometry` | MomentOfArea, BisectorsMethod, FusionExtrapolation, LinearExtrapolation, LSQEllipseFitWithRefinement, EyeCentersInsideImageValidator |
 | `colab/internals/04_quality.ipynb` | Ashlynn Blanshan | `notebook/quality` | x |
 | `colab/internals/05_encoding.ipynb` | Allison Diebol | `notebook/encoding` | LinearNormalization, SharpnessEstimation, ConvFilterBank, GaborFilter, RegularProbeSchema, FragileBitRefinement, IrisEncoder, IsMaskTooSmallValidator, IrisBBoxCalculator |
+
+When opening these notebooks, make sure that you have the proper interpreter or kernel. If working in Jupyter Notebook, make sure that the kernel corresponds to the created virtual environment. It should look similar to `Python (iris_venv)`. In VSCode, under `Select Kernel` choose the Python environment corresponding to iris_venv which should look similar to `iris_venv (3.10.20) (Python 3.10.20)` depending on your Python 3.10 version.
+
+**The following installation instructions come from the upstream repository.**
+
+---
 
 ### Installation
 
