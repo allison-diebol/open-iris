@@ -134,3 +134,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+colab/internals/sample_ir_image.png
