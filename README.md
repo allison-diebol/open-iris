@@ -75,6 +75,10 @@ _The Iris Recognition Inference System (IRIS) software repository is owned and m
 
 ### Data Science Capstone Details
 
+### MVP Video
+A walkthrough showcasing our MVP, including setup, workflow, and results. 
+[Watch the MVP Video](https://mediaspace.msu.edu/media/Tools_for_Humanity-CMSE495_MVP_Presentation_Video/1_zj66jxau)
+
 **This project is developed in a fork of the original open-iris repository.**
 
 Upstream project:
