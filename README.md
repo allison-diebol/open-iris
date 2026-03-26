@@ -71,6 +71,79 @@ _The Iris Recognition Inference System (IRIS) software repository is owned and m
 
 ## Quickstart
 
+---
+
+### Data Science Capstone Details
+
+### MVP Video
+A walkthrough showcasing our MVP, including setup, workflow, and results. 
+[Watch the MVP Video](https://mediaspace.msu.edu/media/Tools_for_Humanity-CMSE495_MVP_Presentation_Video/1_zj66jxau)
+
+**This project is developed in a fork of the original open-iris repository.**
+
+Upstream project:
+https://github.com/worldcoin/open-iris.git
+
+Course project fork:
+https://github.com/allison-diebol/open-iris.git
+
+The forked repository contains additional materials for the Michigan State University Data Science Capstone, including:
+- Specific installation instructions
+- Example notebooks for documenting pipeline internal nodes
+- Pipeline benchmarks against public iris datasets (*currently developing locally*)
+
+### Installation Instructions (Capstone-Specific)
+
+Instructions below assume you clone the course project fork rather than the upstream repository.
+
+**Prerequisite**
+
+Make sure that you have `conda` installed. If not, install [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) or [Anaconda](https://www.anaconda.com/download). You can verify the installation with:
+
+```
+conda --version
+```
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/allison-diebol/open-iris.git
+cd open-iris
+
+# Optionally add upstream reference to track updates
+git remote add upstream https://github.com/worldcoin/open-iris.git
+```
+
+2. **Create and activate the conda environment**
+
+Create a conda environment with Python 3.10 and install all dependencies - including the scientific ones - through conda. This ensures numpy and scikit-image are resolved together by conda, avoiding version conflicts that can occur with pip alone.
+
+```
+conda env create -f conda/environment_server.yml
+conda activate iris_env
+```
+
+3. **Register the environment as a Jupyter kernel**
+
+```
+python -m ipykernel install --user --name=iris_env --display-name "Python (iris_env)"
+```
+When opening notebooks in JupyterLab or VSCode, select `Python (iris_env)` as your kernel.
+
+
+4. **Verify the installation:**
+```
+python -c "import iris; print(iris.__version__)"
+```
+
+### Getting Started for Beginners
+
+Look at our main documentation file *here*. It connects to the internals files, documenting the inputs and outputs of each node along with visuals, with the three Colab files.
+
+**The following installation instructions come from the upstream repository.**
+
+---
+
 ### Installation
 
 Installation is as simple as running `pip install` with specifying `IRIS_ENV` installation global flag (`IRIS_ENV` flag may be skipped if `iris` is installed from PyPl server but this option is only available when `iris` is installed on local machine). The `IRIS_ENV` flag is used to indicate an "environment" in which package is meant to work. Possible options are:
