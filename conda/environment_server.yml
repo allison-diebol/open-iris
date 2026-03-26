@@ -1,0 +1,21 @@
+name: iris_env
+
+channels:
+  - conda-forge
+  
+dependencies:
+  - python=3.10
+  - numpy=1.24.4
+  - scikit-image
+  - matplotlib=3.7.4
+  - pyyaml=6.0.1
+  - jupyter
+  - ipykernel
+  - pip
+  - pip:
+    - pydantic==1.10.13
+    - huggingface-hub==0.19.4
+    - onnx==1.15.0
+    - onnxruntime==1.16.3
+    - opencv-python==4.7.0.68
+    - --editable "."
