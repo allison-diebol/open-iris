@@ -105,7 +105,6 @@ conda --version
 ```
 
 1. **Clone the repository**
-
 ```bash
 git clone https://github.com/allison-diebol/open-iris.git
 cd open-iris
@@ -139,6 +138,7 @@ python -c "import iris; print(iris.__version__)"
 ### Getting Started for Beginners
 
 Look at our main documentation file *here*. It connects to the internals files, documenting the inputs and outputs of each node along with visuals, with the three Colab files.
+
 
 **The following installation instructions come from the upstream repository.**
 
