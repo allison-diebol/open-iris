@@ -7,8 +7,8 @@ dependencies:
   - python=3.10
   - numpy=1.24.4
   - scikit-image
-  - matplotlib=3.7.4
-  - pyyaml=6.0.1
+  - matplotlib>=3.7
+  - pyyaml>=6.0
   - jupyter
   - ipykernel
   - pip
