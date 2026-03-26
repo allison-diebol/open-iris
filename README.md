@@ -120,6 +120,7 @@ Create a conda environment with Python 3.10 and install all dependencies - inclu
 ```
 conda env create -f conda/environment_server.yml
 conda activate iris_env
+IRIS_ENV=SERVER pip install -e .
 ```
 
 3. **Register the environment as a Jupyter kernel**
