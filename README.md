@@ -96,36 +96,15 @@ The forked repository contains additional materials for the Michigan State Unive
 
 Instructions below assume you clone the course project fork rather than the upstream repository.
 
-1. **Ensure Python Version**
+**Prerequisite**
 
-It is recommended to work with Python 3.10 but the package works in 3.8, 3.9, or 3.10. Ensure that you are working in one of these versions rather than a newer version. Below is an example of using Homebrew to install the proper Python version.
-```bash
-brew install python@3.10
+Make sure that you have `conda` installed. If not, install [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) or [Anaconda](https://www.anaconda.com/download). You can verify the installation with:
+
+```
+conda --version
 ```
 
-2. **Create a virtual environment (recommended):**
-
-Although the `open-iris` package installs its own dependencies using the `IRIS_ENV` flag, it is recommended to install the package inside a Python virtual environment. This prevents conflicts with other Python packages installed on your system and ensures reproducibility. As previously mentioned, the `open-iris` package has been tested with Python 3.10. Using newer versions may cause dependency conflicts with some libraries. If needed, create your virtual environment specifically using Python 3.10:
-```bash
-python3.10 -m venv iris_venv
-```
-
-Activate the environment:
-
-- Mac/Linux:
-```bash
-source iris_venv/bin/activate
-```
-- Windows:
-```bash
-iris_venv\Scripts\activate
-```
-Once activated, your terminal prompt should show `(iris_venv)`. Feel free to check the Python version again with the following line:
-```bash
-python --version
-```
-
-3. **Clone the course project fork:**
+1. **Clone the repository**
 ```bash
 git clone https://github.com/allison-diebol/open-iris.git
 cd open-iris
@@ -134,48 +113,32 @@ cd open-iris
 git remote add upstream https://github.com/worldcoin/open-iris.git
 ```
 
+2. **Create and activate the conda environment**
 
-4. **Install the package and dependencies from the cloned repo:**
+Create a conda environment with Python 3.10 and install all dependencies - including the scientific ones - through conda. This ensures numpy and scikit-image are resolved together by conda, avoiding version conflicts that can occur with pip alone.
 
-The `open-iris` repository does not use a single `requirements.txt` file. Instead, dependencies are organized within the `/requirements` directory according to the environment in which the package will run. 
-
-- `base` - core dependencies required by the iris pipeline
-- `server` - dependencies required for running inference on a local machine
-- `orb` - dependencies used when running on Worldcoin Orb hardware
-- `dev` - additional tools for development and testing
-
-These dependency groups are installed automatically based on the environment you select with the `IRIS_ENV` flag. For most users, the recommended environment is `SERVER`, which installs all packages needed to run the iris pipeline locally.
-```bash
-IRIS_ENV=SERVER pip install -e .
+```
+conda env create -f conda/environment_server.yml
+conda activate iris_env
 ```
 
-Run the following installations to ensure that modules like ipykernel exist. Specifically for ipykernel, it is needed so that Jupyter Notebooks can see the virtual environment as a kernel.
-```bash
-pip install "pydantic<2.0" open-iris opencv-python numpy pandas matplotlib tqdm scikit-learn ipykernel
+3. **Register the environment as a Jupyter kernel**
+
 ```
-To ensure that the virtual environment is consistent in IDEs, register the environment as a Jupyter kernel.
-```bash
-python -m ipykernel install --user --name=iris_attempt --display-name "Python (iris_venv)"
+python -m ipykernel install --user --name=iris_env --display-name "Python (iris_env)"
+```
+When opening notebooks in JupyterLab or VSCode, select `Python (iris_env)` as your kernel.
+
+
+4. **Verify the installation:**
+```
+python -c "import iris; print(iris.__version__)"
 ```
 
-5. **Verify the installation:**
-```bash
-python3 -c "import iris; print(iris.__version__)"
-```
+### Getting Started for Beginners
 
-### Running the Example Notebooks
+Look at our main documentation file *here*. It connects to the internals files, documenting the inputs and outputs of each node along with visuals, with the three Colab files.
 
-The capstone team members' initial documentation of the pipeline's internal nodes can be found in the `colab/internals` directory. The top of each notebook that requires it includes automatic download instructions for the image (Some notebooks utilize the sample iris image from the *Getting started* Google Colab file).
-
-| Notebook | Author | Branch | Nodes Covered |
-|----------|--------|--------|--------|
-| `colab/internals/01_segmentation.ipynb` | Tyler Lehman | `notebook/segmentation` | MultilabelSegmentation, MultilabelSegmentationBinarization |
-| `colab/internals/02_vectorization.ipynb` | Morgan Fox | `notebook/vectorization` | ContouringAlgorithm, ContourInterpolation, ContourPointNoiseEyeballDistanceFilter, Smoothing |
-| `colab/internals/03_geometry.ipynb` | Calvin DeJong | `notebook/geometry` | MomentOfArea, BisectorsMethod, FusionExtrapolation, LinearExtrapolation, LSQEllipseFitWithRefinement, EyeCentersInsideImageValidator |
-| `colab/internals/04_quality.ipynb` | Ashlynn Blanshan | `notebook/quality` | x |
-| `colab/internals/05_encoding.ipynb` | Allison Diebol | `notebook/encoding` | LinearNormalization, SharpnessEstimation, ConvFilterBank, GaborFilter, RegularProbeSchema, FragileBitRefinement, IrisEncoder, IsMaskTooSmallValidator, IrisBBoxCalculator |
-
-When opening these notebooks, make sure that you have the proper interpreter or kernel. If working in Jupyter Notebook, make sure that the kernel corresponds to the created virtual environment. It should look similar to `Python (iris_venv)`. In VSCode, under `Select Kernel` choose the Python environment corresponding to iris_venv which should look similar to `iris_venv (3.10.20) (Python 3.10.20)` depending on your Python 3.10 version.
 
 **The following installation instructions come from the upstream repository.**
 
