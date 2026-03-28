@@ -12,14 +12,14 @@ ______________________________________________________________________
 ## Table of contents
 
 - [About](#about)
-- [0.) Getting Started](#0.-Getting-Started)
-- [1.) Segmentation](#1.-Segmentation)
-- [2.) Vectorization](#2.-Vectorization)
-- [3.) Geometry](#3.-Geometry)
-- [4.) Quality](#4.-Quality)
-- [5.) Encoding](#5.-Encoding)
-- [6.) Configuring Custom Pipeline](#6.-Configuring-Custom-Pipeline)
-- [7. Matching Entities](#7.-Matching-Entities)
+- [0.) Getting Started](#0-getting-started)
+- [1.) Segmentation](#1-segmentation)
+- [2.) Vectorization](#2-vectorization)
+- [3.) Geometry](#3-geometry)
+- [4.) Quality](#4-quality)
+- [5.) Encoding](#5-encoding)
+- [6.) Configuring Custom Pipeline](#6-configuring-custom-pipeline)
+- [7. Matching Entities](#7-matching-entities)
 
 ## About
 
