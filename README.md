@@ -75,10 +75,6 @@ _The Iris Recognition Inference System (IRIS) software repository is owned and m
 
 ### Data Science Capstone Details
 
-### MVP Video
-A walkthrough showcasing our MVP, including setup, workflow, and results. 
-[Watch the MVP Video](https://mediaspace.msu.edu/media/Tools_for_Humanity-CMSE495_MVP_Presentation_Video/1_zj66jxau)
-
 **This project is developed in a fork of the original open-iris repository.**
 
 Upstream project:
@@ -120,7 +116,6 @@ Create a conda environment with Python 3.10 and install all dependencies - inclu
 ```
 conda env create -f conda/environment_server.yml
 conda activate iris_env
-IRIS_ENV=SERVER pip install -e .
 ```
 
 3. **Register the environment as a Jupyter kernel**
@@ -138,8 +133,12 @@ python -c "import iris; print(iris.__version__)"
 
 ### Getting Started for Beginners
 
-Look at our main documentation file <a href="https://github.com/allison-diebol/open-iris/blob/main/colab/DocumentationForBeginners.md">here</a>. It connects to the internals files, documenting the inputs and outputs of each node along with visuals, with the three Colab files.
+New to `open-iris`? Check out our main documentation file *here*! It connects to the internals files - documenting the inputs and outputs of each node along with visuals - with the three Colab files - Worldcoin's notes on implementing the pipeline. You can also see the segmentation algorithm in action by testing it with your device's camera!
 
+
+### MVP Video
+A walkthrough showcasing our MVP, including setup, workflow, and results. 
+[Watch the MVP Video](https://mediaspace.msu.edu/media/Tools_for_Humanity-CMSE495_MVP_Presentation_Video/1_zj66jxau)
 
 **The following installation instructions come from the upstream repository.**
 
