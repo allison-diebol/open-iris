@@ -134,7 +134,7 @@ python -c "import iris; print(iris.__version__)"
 
 ### Getting Started for Beginners
 
-New to `open-iris`? Check out our main documentation file *here*! It connects to the internals files - documenting the inputs and outputs of each node along with visuals - with the three Colab files - Worldcoin's notes on implementing the pipeline. You can also see the segmentation algorithm in action by testing it with your device's camera!
+New to `open-iris`? Check out our main documentation file [*here*](colab/DocumentationForBeginners.md)! It connects to the internals files - documenting the inputs and outputs of each node along with visuals - with the three Colab files - Worldcoin's notes on implementing the pipeline. You can also see the segmentation algorithm in action by testing it with your device's camera!
 
 
 ### MVP Video
