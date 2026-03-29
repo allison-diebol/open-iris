@@ -138,7 +138,7 @@ python -c "import iris; print(iris.__version__)"
 
 ### Getting Started for Beginners
 
-Look at our main documentation file *here*. It connects to the internals files, documenting the inputs and outputs of each node along with visuals, with the three Colab files.
+Look at our main documentation file <a href="https://github.com/allison-diebol/open-iris/blob/main/colab/DocumentationForBeginners.md">here</a>. It connects to the internals files, documenting the inputs and outputs of each node along with visuals, with the three Colab files.
 
 
 **The following installation instructions come from the upstream repository.**
