@@ -32,6 +32,11 @@ This guide is intended for:
 - Users of the `iris` package
 - Researchers exploring biometric pipelines.
 
+**Note:** Many of the files use a sample iris image which can be found at the start of the GettingStarted file. If running the cells out of order, please ensure that the sample image has already been downloaded.
+
+    !curl -L https://wld-ml-ai-data-public.s3.amazonaws.com/public-iris-images/example_orb_image_1.png -o ./sample_ir_image.png
+
+
 ## Getting Started
 
  **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/GettingStarted.ipynb">Getting Started Notebook</a>**
@@ -147,3 +152,5 @@ Iris recognition depends heavily on image quality. Poor focus, noise, motion blu
 - Low resolution can result in unreliable encoding
 
 ## Try It Yourself: Camera Implementation
+
+The GettingStarted file has been edited to allow you to play around with using images of your own eye! Look at the `Inputs` section, and follow option two to use an image from your camera.
