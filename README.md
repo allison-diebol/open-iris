@@ -85,8 +85,17 @@ https://github.com/allison-diebol/open-iris.git
 
 The forked repository contains additional materials for the Michigan State University Data Science Capstone, including:
 - Specific installation instructions
-- Example notebooks for documenting pipeline internal nodes
+  
+- Example notebooks for documenting pipeline internal nodes:
+  - Segmentation — [01_segmentation.ipynb](https://github.com/allison-diebol/open-iris/blob/main/colab/internals/01_segmentation.ipynb)
+  - Vectorization — [02_vectorization.ipynb](https://github.com/allison-diebol/open-iris/blob/main/colab/internals/02_vectorization.ipynb)
+  - Geometry Refinement — [03_geometry.ipynb](https://github.com/allison-diebol/open-iris/blob/main/colab/internals/03_geometry.ipynb)
+  - Quality Assessment — [04_quality.ipynb](https://github.com/allison-diebol/open-iris/blob/main/colab/internals/04_quality.ipynb)
+  - Encoding — [05_encoding.ipynb](https://github.com/allison-diebol/open-iris/blob/main/colab/internals/05_encoding.ipynb)
+  
 - Pipeline benchmarks against public iris datasets (*currently developing locally*)
+
+
 
 ### Installation Instructions (Capstone-Specific)
 
