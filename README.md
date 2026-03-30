@@ -93,8 +93,12 @@ The forked repository contains additional materials for the Michigan State Unive
   - Quality Assessment — [04_quality.ipynb](https://github.com/allison-diebol/open-iris/blob/main/colab/internals/04_quality.ipynb)
   - Encoding — [05_encoding.ipynb](https://github.com/allison-diebol/open-iris/blob/main/colab/internals/05_encoding.ipynb)
   
-- Pipeline benchmarks against public iris datasets (*currently developing locally*)
-
+- Pipeline benchmarks against public iris datasets (*currently being developed locally*):
+  - [CASIA-IrisV4 (official)](https://hycasia.github.io/dataset/casia-irisv4/)
+  - [CASIA (Kaggle mirror)](https://www.kaggle.com/datasets/sondosaabed/casia-iris-thousand)
+  - [IITD Iris Dataset](https://www4.comp.polyu.edu.hk/~csajaykr/IITD/Database_Iris.htm)
+  - [PolyU (Hong Kong) Iris Dataset](https://www4.comp.polyu.edu.hk/~csajaykr/polyuiris.htm)
+  - Benchmark notebook -  [CASIA_IITD_Benchmark.ipynb](https://github.com/allison-diebol/open-iris/blob/main/benchmarking/CASIA_IITD_Benchmark.ipynb)
 
 
 ### Installation Instructions (Capstone-Specific)
