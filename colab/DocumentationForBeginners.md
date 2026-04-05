@@ -18,6 +18,7 @@ ______________________________________________________________________
 - [Geometry](#geometry)
 - [Quality](#quality)
 - [Encoding](#encoding)
+- [Evaluation Suite Demo](#evaluation-suite-demo)
 - [Configuring Custom Pipeline](#configuring-custom-pipeline)
 - [Matching Entities](#matching-entities)
 - [Common Issues](#common-issues)
@@ -125,6 +126,17 @@ The final documentation notebook, `encoding`, will walk you through the iris rec
 - Visualize intermediate and final outputs, including normalized strips, noise masks, filter responses, refined masks, and binary iris codes.
 
 Classes Covered: `LinearNormalization`, `SharpnessEstimation`, `SharpnessValidator`, `ConvFilterBank`, `GaborFilter`, `RegularProbeSchema`, `FragileBitRefinement`, `IrisEncoder`, `IsMaskTooSmallValidator`, `IrisBBoxCalculator`
+
+## Evaluation Suite Demo
+
+ **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/EvaluationSuiteDemo.ipynb">Evaluation Notebook</a>**
+
+This notebook demonstrates how to use the easy-to-use evaluation functions for the open-iris pipeline. These helper functions abstract away the complexity of the full pipeline and allow for quick dataset experimentation and evaluation. Key functions used in this notebook are:
+- `evaluate_dataset`: Runs the full pipeline (template creation, matching, scoring).
+- `evaluation_report`: Prints a summary of performance metrics.
+- `plot_roc`: Visualizes the ROC curve.
+- `plot_far_frr`: Shows FAR vs FRR tradeoff.
+- `plot_score_distributions`: Displays genuine vs impostor score distributions.
 
 ## Configuring Custom Pipeline
 
