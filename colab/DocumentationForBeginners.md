@@ -40,7 +40,7 @@ This guide is intended for:
 
 ## Getting Started
 
- **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/GettingStarted.ipynb">Getting Started Notebook</a>**
+ **<a href="../colab/GettingStarted.ipynb">Getting Started Notebook</a>**
 
 The Getting Started notebook is the first step in running your first `iris` code. This will walk you through the basics of usage `iris` package. From it you will learn how to:
 - Perform an `IRISPipeline` inference call.
@@ -52,7 +52,7 @@ The Getting Started notebook is the first step in running your first `iris` code
 
 ## Segmentation
 
- **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/internals/01_segmentation.ipynb">Segmentation Notebook</a>**
+ **<a href="../colab/internals/01_segmentation.ipynb">Segmentation Notebook</a>**
 
 Segmentation focuses on isolating the iris region. This Jupyter Notebook will walk you through the first step in iris recognition, `segmentation`, and does this through the `iris.nodes.segmentation` node. From it you will learn how to:
 - Prepare an infrared (IR) eye image for processing.  
@@ -66,7 +66,7 @@ Classes Covered: `MultilabelSegmentation`, `MultilabelSegmentationBinarization`
 
 ## Vectorization
 
- **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/internals/02_vectorization.ipynb">Vectorization Notebook</a>**
+ **<a href="../colab/internals/02_vectorization.ipynb">Vectorization Notebook</a>**
 
 Vectorization focuses on refining the boundaries of the image and iris. This Jupyter Notebook will walk you through the second step in iris recognition, `vectorization`, and does this through the `iris.nodes.vectorization` node. From it you will learn how to:
 
@@ -81,7 +81,7 @@ Classes Covered: `ContouringAlgorithm`, `ContourPointNoiseEyeballDistanceFilter`
 
 ## Geometry
 
- **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/internals/03_geometry.ipynb">Geometry Notebook</a>**
+ **<a href="../colab/internals/03_geometry.ipynb">Geometry Notebook</a>**
 
 Next is the `geometry` step, and this is done through the nodes `iris.nodes.geometry_estimation` and `iris.nodes.eye_properties_estimation`. From it you will learn how to:
 
@@ -98,7 +98,7 @@ Classes Covered: `MomentOfArea`, `BisectorsMethod`, `FusionExtrapolation`, `Line
 
 ## Quality
 
- **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/internals/04_quality.ipynb">Quality Notebook</a>**
+ **<a href="../colab/internals/04_quality.ipynb">Quality Notebook</a>**
 
 This Jupyter Notebook documents the `quality` assessment portion, covering `iris.nodes.eyes_properties_estimation`, `iris.nodes.aggregation`, and `iris.nodes.validators`. From it you will learn how to:
 
@@ -114,7 +114,7 @@ Classes Covered: `PupilIrisPropertyCalculator`, `EccentricityOffgazeEstimation`,
 
 ## Encoding
 
- **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/internals/05_encoding.ipynb">Encoding Notebook</a>**
+ **<a href="../colab/internals/05_encoding.ipynb">Encoding Notebook</a>**
 
 The final documentation notebook, `encoding`, will walk you through the iris recognition pipeline beyond segmentation, covering normalization, quality assessment, feature extraction, and encoding through:
 - Converting the circular iris region into a normalized rectangular strip using LinearNormalization.
@@ -129,7 +129,7 @@ Classes Covered: `LinearNormalization`, `SharpnessEstimation`, `SharpnessValidat
 
 ## Evaluation Suite Demo
 
- **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/EvaluationSuiteDemo.ipynb">Evaluation Notebook</a>**
+ **<a href="../colab/EvaluationSuiteDemo.ipynb">Evaluation Notebook</a>**
 
 This notebook demonstrates how to use the easy-to-use evaluation functions for the open-iris pipeline. These helper functions abstract away the complexity of the full pipeline and allow for quick dataset experimentation and evaluation. Key functions used in this notebook are:
 - `evaluate_dataset`: Runs the full pipeline (template creation, matching, scoring).
@@ -140,7 +140,7 @@ This notebook demonstrates how to use the easy-to-use evaluation functions for t
 
 ## Configuring Custom Pipeline
 
- **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/ConfiguringCustomPipeline.ipynb">Custom Pipeline Notebook</a>**
+ **<a href="../colab/ConfiguringCustomPipeline.ipynb">Custom Pipeline Notebook</a>**
 
 This Jupyter Notebook will walk you through you the steps you have to take to configure your custom `IRISPipeline`. From it you will learn how to:
 
@@ -150,7 +150,7 @@ This Jupyter Notebook will walk you through you the steps you have to take to co
 
 ## Matching Entities
 
- **<a href="https://github.com/allison-diebol/open-iris/blob/main/colab/MatchingEntities.ipynb">Matching Notebook</a>**
+ **<a href="../colab/MatchingEntities.ipynb">Matching Notebook</a>**
 
 This Jupyter Notebook will walk you through the basics of how to use matchers available in the `iris` package. From it you will learn how to:
 
