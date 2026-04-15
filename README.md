@@ -152,7 +152,7 @@ This forked repository contains additional materials from the Michigan State Uni
  
 - Evaluation Suite feature functions [here](src/iris/evaluation/evaluation_metrics.py)
 
-- Downsampling Node [here](src/iris/nodes/downsampling/image_downsampling.py‎)
+- Downsampling Node [here](src/iris/nodes/downsampling/image_downsampling.py)
 
 
 #### MVP Video
