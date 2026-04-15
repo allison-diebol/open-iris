@@ -83,24 +83,6 @@ https://github.com/worldcoin/open-iris.git
 Course project fork:
 https://github.com/allison-diebol/open-iris.git
 
-The forked repository contains additional materials for the Michigan State University Data Science Capstone, including:
-- Specific installation instructions
-  
-- Example notebooks for documenting pipeline internal nodes:
-  - Segmentation — [01_segmentation.ipynb](./colab/internals/01_segmentation.ipynb)
-  - Vectorization — [02_vectorization.ipynb](./colab/internals/02_vectorization.ipynb)
-  - Geometry Refinement — [03_geometry.ipynb](./colab/internals/03_geometry.ipynb)
-  - Quality Assessment — [04_quality.ipynb](./colab/internals/04_quality.ipynb)
-  - Encoding — [05_encoding.ipynb](./colab/internals/05_encoding.ipynb)
-  
-- Pipeline benchmarks against public iris datasets (*currently being developed locally*):
-  - [CASIA-IrisV4 (official)](https://hycasia.github.io/dataset/casia-irisv4/)
-  - [CASIA (Kaggle mirror)](https://www.kaggle.com/datasets/sondosaabed/casia-iris-thousand)
-  - [IITD Iris Dataset](https://www4.comp.polyu.edu.hk/~csajaykr/IITD/Database_Iris.htm)
-  - [PolyU (Hong Kong) Iris Dataset](https://www4.comp.polyu.edu.hk/~csajaykr/polyuiris.htm)
-  - Benchmark notebook -  [CASIA_IITD_Benchmark.ipynb](https://github.com/allison-diebol/open-iris/blob/main/benchmarking/CASIA_IITD_Benchmark.ipynb)
-
-
 ### Installation Instructions (Capstone-Specific)
 
 Instructions below assume you clone the course project fork rather than the upstream repository.
@@ -149,9 +131,32 @@ python -c "import iris; print(iris.__version__)"
 
 New to `open-iris`? Check out our main documentation file [*here*](colab/DocumentationForBeginners.md)! It connects to the internals files - documenting the inputs and outputs of each node along with visuals - with the three Colab files - Worldcoin's notes on implementing the pipeline. You can also see the segmentation algorithm in action by testing it with your device's camera!
 
+### Capstone Contributions
 
-### MVP Video
-A walkthrough showcasing our MVP, including setup, workflow, and results. 
+This forked repository contains additional materials from the Michigan State University Data Science Capstone Team, including:
+- Specific installation instructions
+
+- Main [documentation for beginners file](colab/DocumentationForBeginners.md), linking existing documentation to the new
+  
+- Example notebooks for documenting pipeline internal nodes:
+  - Segmentation — [01_segmentation.ipynb](./colab/internals/01_segmentation.ipynb)
+  - Vectorization — [02_vectorization.ipynb](./colab/internals/02_vectorization.ipynb)
+  - Geometry Refinement — [03_geometry.ipynb](./colab/internals/03_geometry.ipynb)
+  - Quality Assessment — [04_quality.ipynb](./colab/internals/04_quality.ipynb)
+  - Encoding — [05_encoding.ipynb](./colab/internals/05_encoding.ipynb)
+ 
+- [Documentation for new Evaluation Suite feature]((colab/EvaluationSuiteDemo.ipynb))
+  
+- Benchmarking folder and notebooks
+  - See the benchmarking information and files [here](benchmarking/README.md)
+ 
+- Evaluation Suite feature functions [here](src/iris/evaluation/evaluation_metrics.py)
+
+- Downsampling Node [here](src/iris/nodes/downsampling/image_downsampling.py‎)
+
+
+#### MVP Video
+A walkthrough showcasing our MVP progress on documentation, benchmarking, and new feature development, including setup, workflow, and results. 
 [Watch the MVP Video](https://mediaspace.msu.edu/media/Tools_for_Humanity-CMSE495_MVP_Presentation_Video/1_zj66jxau)
 
 **The following installation instructions come from the upstream repository.**
