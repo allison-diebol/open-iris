@@ -145,7 +145,7 @@ This forked repository contains additional materials from the Michigan State Uni
   - Quality Assessment — [04_quality.ipynb](./colab/internals/04_quality.ipynb)
   - Encoding — [05_encoding.ipynb](./colab/internals/05_encoding.ipynb)
  
-- [Documentation for new Evaluation Suite feature]((colab/EvaluationSuiteDemo.ipynb))
+- [Documentation for new Evaluation Suite feature](colab/EvaluationSuiteDemo.ipynb)
   
 - Benchmarking folder and notebooks
   - See the benchmarking information and files [here](benchmarking/README.md)
