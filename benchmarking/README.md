@@ -26,6 +26,21 @@ There are many public iris datasets available online yet most require some form 
   [Hong Kong PolyU Access](https://www4.comp.polyu.edu.hk/~csajaykr/polyuiris.htm)
 
 ### Notebooks
+[`01_iris_pipeline_encoding.ipynb`](01_iris_pipeline_encoding.ipynb)
+
+Handles dataset ingestion and pipeline execution:
+- Builds the structured image dataset used throughout benchmarking
+- Encodes iris templates
+- Logs failures and pipeline outputs
+
+[`02_iris_failure_analysis.ipynb`](02_iris_failure_analysis.ipynb)
+
+Analyzes pipeline failures to understand breakdown points and improvement opportunities:
+- Identifies common error modes
+- Investigates challenging samples
+- Evaluates preprocessing-based recovery strategies
+- Explores segmentation vs. vectorization failure attribution
+  
 [`CASIA_IITD_Benchmark.ipynb`](CASIA_IITD_Benchmark.ipynb)
 
 Benchmark comparison between CASIA and IITD datasets. Includes:
@@ -46,12 +61,3 @@ alongside looking into balanced and unbalanced sets as well as same-session and 
 Explores how downsampling images before segmentation impacts:
 - Pipeline runtime
 - Recognition accuracy
-
-[`iris_failure_analysis.ipynb`](iris_failure_analysis.ipynb)
-
-Digs into failiure cases to better understand where the pipeline breaks down:
-- Common error modes
-- Challenging samples
-- Potential areas for improvement
-
-
