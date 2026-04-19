@@ -154,6 +154,9 @@ This forked repository contains additional materials from the Michigan State Uni
 
 - Downsampling Node [here](src/iris/nodes/downsampling/image_downsampling.py)
 
+#### Final Presentation Video
+Final presentation for the Tools for Humanity Iris Recognition Project. This video provides a comprehensive overview of our completed work, highlighting key outcomes from our documentation, benchmarking, and feature development efforts, along with potential directions for future improvement. 
+[Watch the Final Presentation Video](https://mediaspace.msu.edu/media/ToolsforHumanity_CMSE495_Final_Video/1_0txolavc)
 
 #### MVP Video
 A walkthrough showcasing our MVP progress on documentation, benchmarking, and new feature development, including setup, workflow, and results. 
