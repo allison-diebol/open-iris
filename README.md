@@ -75,6 +75,13 @@ _The Iris Recognition Inference System (IRIS) software repository is owned and m
 
 ### Data Science Capstone Details
 
+This segment of the repository is part of **CMSE 495**, the final-year undergraduate capstone course for the computational mathematics, science, and engineering students at Michigan State University (MSU). The course focuses on team-based data science projects in partnership with client and company sponsors to boost both technical and professional skills. The course goals consist of the following:
+- Provide students with high impact, end-to-end project experience where they can apply classroom experiences and data science skills to solve real-world problems.
+- Provide students with opportunities to learn and practice professional skills (communication, teamwork, and leadership) in the context of team-based projects.
+- Provide opportunities for students and faculty in the department to build relationships and network with industry partners, community organizations, and campus colleagues.
+
+Our team is collaborating with [Tools for Humanity](https://www.toolsforhumanity.com) on **"Iris Recognition for Secure Identity Verification"** in which members will build upon the [open-source IRIS matcher](https://github.com/worldcoin/open-iris) to analyze results and improve performance. We want to produce measurable results, focusing on efficiency and accuracy, while working with a production-grade codebase and contributing to an active open-source project. To improve performance, we plan on looking into better segmentation, feature extraction, normalization, and matching techniques while leveraging feature maps, matching scores, confusion matrices, and ROC curves for visualization. Some public iris datasets we will consider using include CASIA, UBIRIS, and IITD to both train and test recognition algorithms. Throughout our work, we plan to note the limitations and risks of iris-based biometric systems as well.
+
 **This project is developed in a fork of the original open-iris repository.**
 
 Upstream project:
@@ -154,11 +161,10 @@ This forked repository contains additional materials from the Michigan State Uni
 
 - Downsampling Node [here](src/iris/nodes/downsampling/image_downsampling.py)
 
-#### Final Presentation Video
+#### Progress Videos
 Final presentation for the Tools for Humanity Iris Recognition Project. This video provides a comprehensive overview of our completed work, highlighting key outcomes from our documentation, benchmarking, and feature development efforts, along with potential directions for future improvement. 
 [Watch the Final Presentation Video](https://mediaspace.msu.edu/media/ToolsforHumanity_CMSE495_Final_Video/1_0txolavc)
 
-#### MVP Video
 A walkthrough showcasing our MVP progress on documentation, benchmarking, and new feature development, including setup, workflow, and results. 
 [Watch the MVP Video](https://mediaspace.msu.edu/media/Tools_for_Humanity-CMSE495_MVP_Presentation_Video/1_zj66jxau)
 
